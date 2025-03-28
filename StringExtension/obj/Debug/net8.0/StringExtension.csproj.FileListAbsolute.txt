@@ -1,0 +1,11 @@
+/Users/kido/StringExtensions/StringExtension/bin/Debug/net8.0/StringExtension.deps.json
+/Users/kido/StringExtensions/StringExtension/bin/Debug/net8.0/StringExtension.dll
+/Users/kido/StringExtensions/StringExtension/bin/Debug/net8.0/StringExtension.pdb
+/Users/kido/StringExtensions/StringExtension/obj/Debug/net8.0/StringExtension.GeneratedMSBuildEditorConfig.editorconfig
+/Users/kido/StringExtensions/StringExtension/obj/Debug/net8.0/StringExtension.AssemblyInfoInputs.cache
+/Users/kido/StringExtensions/StringExtension/obj/Debug/net8.0/StringExtension.AssemblyInfo.cs
+/Users/kido/StringExtensions/StringExtension/obj/Debug/net8.0/StringExtension.csproj.CoreCompileInputs.cache
+/Users/kido/StringExtensions/StringExtension/obj/Debug/net8.0/StringExtension.dll
+/Users/kido/StringExtensions/StringExtension/obj/Debug/net8.0/refint/StringExtension.dll
+/Users/kido/StringExtensions/StringExtension/obj/Debug/net8.0/StringExtension.pdb
+/Users/kido/StringExtensions/StringExtension/obj/Debug/net8.0/ref/StringExtension.dll

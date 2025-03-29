@@ -52,7 +52,8 @@ steps:
   inputs:
     command: 'push'
     packagesToPush: '$(Build.ArtifactStagingDirectory)/*.nupkg'
-    publishVstsFeed: 'Lab4'   
+    publishVstsFeed: 'Lab4/Lab4'
+
 
 # Publish the generated package as a pipeline artifact
 - task: PublishBuildArtifacts@1

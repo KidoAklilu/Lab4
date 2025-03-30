@@ -1,0 +1,30 @@
+# ASP.NET Core (.NET Framework)
+# Build and test ASP.NET Core projects targeting the full .NET Framework.
+# Add steps that publish symbols, save build artifacts, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
+
+trigger:
+- main
+
+pool:
+  name: Lab4  
+
+steps:
+- task: UseDotNet@2
+  inputs:
+    packageType: 'sdk'
+    version: '8.0.x' 
+
+- script: dotnet restore ./StringExtension.csproj
+  displayName: 'Restore packages'
+
+- script: dotnet build ./StringExtension.csproj --configuration Release
+  displayName: 'Build solution'
+
+- script: dotnet test ./StringExtension.csproj
+  displayName: 'Run tests'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    artifactName: 'drop'
+    targetPath: '$(Build.ArtifactStagingDirectory)'

@@ -10,6 +10,8 @@ pool:
   name: Lab4  
 
 steps:
+- checkout: self  
+
 - task: UseDotNet@2
   inputs:
     packageType: 'sdk'
@@ -21,7 +23,6 @@ steps:
 - script: dotnet build $(Build.SourcesDirectory)/StringExtension/StringExtension.csproj --configuration Release -o $(Build.ArtifactStagingDirectory)
   displayName: 'Build solution'
 
-
 - script: dotnet test ./StringExtension/StringExtension.csproj
   displayName: 'Run tests'
 
@@ -29,4 +30,5 @@ steps:
   inputs:
     artifactName: 'drop'
     targetPath: '$(Build.ArtifactStagingDirectory)'
+
 

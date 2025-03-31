@@ -23,12 +23,17 @@ steps:
 - script: dotnet build $(Build.SourcesDirectory)/StringExtension/StringExtension.csproj --configuration Release -o $(Build.ArtifactStagingDirectory)
   displayName: 'Build solution'
 
+- script: |
+    echo "Listing contents of $(Build.ArtifactStagingDirectory)"
+    dir $(Build.ArtifactStagingDirectory)  # For Windows agents
+  displayName: 'List directory contents'
+
 - script: dotnet test ./StringExtension/StringExtension.csproj
   displayName: 'Run tests'
 
 - task: PublishBuildArtifacts@1
   inputs:
     artifactName: 'drop'
-    targetPath: '$(Build.ArtifactStagingDirectory)'
-
+    targetPath: '$(Build.ArtifactStagingDirectory)'  
+    publishLocation: 'Container'  
 

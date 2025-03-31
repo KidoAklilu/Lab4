@@ -19,7 +19,11 @@ steps:
   displayName: 'Restore packages'
 
 - script: dotnet build ./StringExtension/StringExtension.csproj --configuration Release -o $(Build.ArtifactStagingDirectory)
+  workingDirectory: $(Build.SourcesDirectory)
   displayName: 'Build solution'
+
+- script: ls -R
+  displayName: 'List directory structure'
 
 - script: dotnet test ./StringExtension/StringExtension.csproj
   displayName: 'Run tests'

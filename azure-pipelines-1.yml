@@ -18,12 +18,8 @@ steps:
 - script: dotnet restore ./StringExtension/StringExtension.csproj
   displayName: 'Restore packages'
 
-- script: dotnet build ./StringExtension/StringExtension.csproj --configuration Release -o $(Build.ArtifactStagingDirectory)
-  workingDirectory: $(Build.SourcesDirectory)
+- script: dotnet build $(Build.SourcesDirectory)/StringExtension/StringExtension.csproj --configuration Release -o $(Build.ArtifactStagingDirectory)
   displayName: 'Build solution'
-
-- script: dir /s
-  displayName: 'List directory structure'
 
 
 - script: dotnet test ./StringExtension/StringExtension.csproj

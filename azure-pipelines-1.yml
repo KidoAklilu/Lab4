@@ -18,9 +18,8 @@ steps:
 - script: dotnet restore ./StringExtension/StringExtension.csproj
   displayName: 'Restore packages'
 
-- script: dotnet build --configuration Release -o $(Build.ArtifactStagingDirectory)
+- script: dotnet build ./StringExtension/StringExtension.csproj --configuration Release -o $(Build.ArtifactStagingDirectory)
   displayName: 'Build solution'
-
 
 - script: dotnet test ./StringExtension/StringExtension.csproj
   displayName: 'Run tests'
@@ -29,3 +28,4 @@ steps:
   inputs:
     artifactName: 'drop'
     targetPath: '$(Build.ArtifactStagingDirectory)'
+

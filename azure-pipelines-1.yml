@@ -22,8 +22,9 @@ steps:
   workingDirectory: $(Build.SourcesDirectory)
   displayName: 'Build solution'
 
-- script: ls -R
+- script: dir /s
   displayName: 'List directory structure'
+
 
 - script: dotnet test ./StringExtension/StringExtension.csproj
   displayName: 'Run tests'

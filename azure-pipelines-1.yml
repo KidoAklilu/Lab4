@@ -27,6 +27,7 @@ steps:
 
 - script: dotnet test ./StringExtension/StringExtension.csproj
   displayName: 'Run tests'
+  
 
 - task: PublishBuildArtifacts@1
   inputs:
